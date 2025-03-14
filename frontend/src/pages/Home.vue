@@ -1,16 +1,9 @@
 <template>
-  <div>
-    <h1>Home</h1>
-    <button @click="fetchData">Fetch Data</button>
-    <p v-if="loading">Loading...</p>
-    <p v-if="data">Response: {{ data }}</p>
-    <p v-if="error">Error: {{ error.message }}</p>
+  <div class="min-h-screen bg-gray-950 flex flex-col items-center justify-center">
+    <Chat />
   </div>
 </template>
 
-
 <script setup>
-import { useDataFetch } from '../composables/useDataFetch';
-
-const { data, loading, error, fetchData } = useDataFetch();
+import Chat from '../components/Chat.vue'
 </script>
